@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Conlan's Epic Fucking MineSweepa</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <h1 class="Title">Conlan's Epic Fucking MineSweepa</h1>
+    <h2 class="HowToPlay">How To Play</h2>
+    <div class="slider">
+      <input
+        type="range"
+        min="1"
+        max="100"
+        value="50"
+        oninput="rangeValue.innerText = this.value"
+        id="gridSize"
+      />
+      <p class="numberBox" id="rangeValue">50</p>
+      <input
+        type="range"
+        min="1"
+        max="100"
+        value="50"
+        oninput="rangeValue2.innerText = this.value"
+        id="bombCount"
+      />
+      <p class="numberBox" id="rangeValue2">50</p>
+    </div>
+      <button
+        class="startButton"
+        onclick="startGame()"
+      >
+        Start Game
+      </button>
+    </a>
+    <h2 class="AboutMe">about me</h2>
+    <script>
+      function startGame(){
+        
+        const gridSize = document.getElementById(`gridSize`).value;
+        const bombCount = document.getElementById(`bombCount`).value;
+        console.log("sending values")
+
+    //localStorage.setItem('gridSize', document.getElementById('gridSize').value);
+    //localStorage.setItem('bombCount', document.getElementById('bombCount').value);
+    window.location.href = `../MinesweeperTheGame/index.html?gridSize=${gridSize}&bombCount=${bombCount}`;
+}
+    </script>
+    <script type="module" src="script.js"></script>
+  </body>
+</html>
